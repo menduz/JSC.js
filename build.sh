@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-IMAGE=menduz/jsc:latest
+IMAGE=${IMAGE:-menduz/jsc:latest}
 
 mkdir -p out && chmod 777 out
 docker run --rm -t -v "$(pwd):/src" -w "/src" -v "$(pwd)/out:/out" \
