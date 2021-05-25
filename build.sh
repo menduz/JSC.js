@@ -9,7 +9,7 @@ docker run --rm -t -v "$(pwd):/src" -w "/src" -v "$(pwd)/out:/out" \
     set -euo pipefail
     shopt -s nullglob
     export OUT='/out'
-    gn gen out --args=\"target_os=\\\"wasm\\\" is_debug=true\"
+    gn gen out --args=\"target_os=\\\"wasm\\\"\"
     ninja -C out
 "
 
