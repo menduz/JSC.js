@@ -26,6 +26,7 @@ jobs:
           # build-args: |
           #   arg1=value1
           #   arg2=value2
+      - uses: actions/checkout@master
       - name: Run build
         run: ./build.sh
       - name: Image digest
